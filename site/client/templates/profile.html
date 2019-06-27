@@ -1,0 +1,12 @@
+<template name="profile">
+    <div class="row" style="background-color: white;  margin-bottom:0px;">
+        <div class="col s12" style="padding-right: 0px;">
+            <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+                <p class="profileUsername">{{#with _id}}{{> nametag}}{{/with}}</p>
+                <p class="profileUserData">Posts: {{#if postCount}}{{postCount}}{{else}}0{{/if}}</p>
+                <p class="profileUserData">Join Date: {{getYear createdAt}}-{{getMonth createdAt}}-{{getDate createdAt}}</p>
+            </div>
+        </div>
+    </div>
+</template>
+

@@ -1,0 +1,13 @@
+<template name="newTopic">
+    <div class="row" style="background-color: white;">
+        <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+            <form class="newTopic">
+                <p>Title of the topic: <input type="text" name="title"></p>
+                <label for="content">Content</label>
+                {{> contentInput}}
+                <p><input type="submit" value="Submit"></p>
+            </form>
+        </div>
+    </div>
+</template>
+

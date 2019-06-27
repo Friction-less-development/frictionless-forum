@@ -1,0 +1,72 @@
+﻿.navPage {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.postTitle {
+    color: #105289;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 125%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.author {
+    color: #536482;
+    font-size: .7em;
+    line-height: 1.2em;
+    margin-top: 0px;
+}
+.postContent {
+    color: #536482;
+}
+
+.postUsername {
+    color: #105289;
+    font-weight: 700;
+    cursor:pointer;
+}
+
+.postUsername:hover {
+    color: red !important;
+}
+
+.authorName {
+    cursor: pointer;
+}
+
+.authorName:hover {
+    color: red !important;
+}
+
+.postUserData {
+    color: #536482;
+    font-size: .7em;
+    line-height: 1.2em;
+    margin-top: 0px;
+}
+
+.editReply {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    color: #105289;
+}
+
+.editTopicButton {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    color: #105289;
+}
+
+.deleteReply {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    cursor: pointer;
+    color: #105289;
+}

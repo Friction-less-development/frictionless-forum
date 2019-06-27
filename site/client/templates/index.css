@@ -1,0 +1,16 @@
+﻿.forumTitle {
+    color: #105289;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+.forumTitle:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.forumIndex {
+    color: #536482;
+}

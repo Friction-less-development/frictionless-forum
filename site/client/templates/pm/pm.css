@@ -1,0 +1,59 @@
+﻿.pmSubjectBox {
+    margin: 0px;
+}
+
+.inboxPm, .sentboxPm, .outboxPm, .newPm {
+    cursor:pointer;
+}
+
+    .inboxPm:hover, .sentboxPm:hover, .outboxPm:hover, .newPm:hover {
+        color: red;
+    }
+
+.pmTitle {
+    margin: 0px;
+    color: #034566;
+    font-size: 1.05em;
+    text-transform: uppercase;
+}
+
+.pmSubjectBox a {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #105078 !important;
+}
+
+    .pmSubjectBox a:hover {
+        text-decoration: underline;
+        color: red !important;
+    }
+
+.pmData {
+    margin: 0px;
+    color: #536482 !important;
+}
+
+    .pmData a {
+        color: #105289 !important;
+    }
+    .pmData a:hover {
+        color: red !important;
+        text-decoration: underline;
+    }
+
+
+.pmEditButton {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    color: #105289;
+}
+
+.pmDeleteButton {
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    cursor: pointer;
+    color: #105289;
+}

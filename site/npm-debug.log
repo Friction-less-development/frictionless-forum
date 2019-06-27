@@ -1,0 +1,52 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Users\\Ben\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.1_1\\mt-os.windows.x86_32\\dev_bundle\\bin\\node.exe',
+1 verbose cli   'C:\\Users\\Ben\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.1_1\\mt-os.windows.x86_32\\dev_bundle\\lib\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   './picker.js' ]
+2 info using npm@3.10.6
+3 info using node@v4.5.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData ./picker.js
+8 silly fetchOtherPackageData ./picker.js
+9 silly cache add args [ './picker.js', null ]
+10 verbose cache add spec ./picker.js
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: './picker.js',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: './picker.js',
+11 silly cache add   spec: 'C:\\Users\\Ben\\Documents\\Meteor\\Test\\picker.js',
+11 silly cache add   type: 'local' }
+12 error addLocal Could not install C:\Users\Ben\Documents\Meteor\Test\picker.js
+13 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open 'C:\Users\Ben\Documents\Meteor\Test\picker.js'
+13 silly fetchPackageMetaData     at Error (native)
+13 silly fetchPackageMetaData  error for ./picker.js { [Error: ENOENT: no such file or directory, open 'C:\Users\Ben\Documents\Meteor\Test\picker.js']
+13 silly fetchPackageMetaData   errno: -4058,
+13 silly fetchPackageMetaData   code: 'ENOENT',
+13 silly fetchPackageMetaData   syscall: 'open',
+13 silly fetchPackageMetaData   path: 'C:\\Users\\Ben\\Documents\\Meteor\\Test\\picker.js' }
+14 silly rollbackFailedOptional Starting
+15 silly rollbackFailedOptional Finishing
+16 silly runTopLevelLifecycles Starting
+17 silly runTopLevelLifecycles Finishing
+18 silly install printInstalled
+19 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\Ben\Documents\Meteor\Test\picker.js'
+19 verbose stack     at Error (native)
+20 verbose cwd C:\Users\Ben\Documents\Meteor\Test
+21 error Windows_NT 6.3.9600
+22 error argv "C:\\Users\\Ben\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.1_1\\mt-os.windows.x86_32\\dev_bundle\\bin\\node.exe" "C:\\Users\\Ben\\AppData\\Local\\.meteor\\packages\\meteor-tool\\1.4.1_1\\mt-os.windows.x86_32\\dev_bundle\\lib\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "./picker.js"
+23 error node v4.5.0
+24 error npm  v3.10.6
+25 error path C:\Users\Ben\Documents\Meteor\Test\picker.js
+26 error code ENOENT
+27 error errno -4058
+28 error syscall open
+29 error enoent ENOENT: no such file or directory, open 'C:\Users\Ben\Documents\Meteor\Test\picker.js'
+30 error enoent ENOENT: no such file or directory, open 'C:\Users\Ben\Documents\Meteor\Test\picker.js'
+30 error enoent This is most likely not a problem with npm itself
+30 error enoent and is related to npm not being able to find a file.
+31 verbose exit [ -4058, true ]

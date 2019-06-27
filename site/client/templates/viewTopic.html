@@ -1,0 +1,68 @@
+<template name="viewTopic">
+    <div class="row" style="background-color: white;  margin-bottom:0px;">
+
+        <nav style="box-shadow:none; height:130px;">
+            <div class="nav-wrapper white" style="padding: 0px 10px;">
+                <a href="#" class="left brand-logo" style="color: #105078;">{{title}}</a>
+                <br />
+                <ul id="nav-mobile" class="right">
+                    {{#if showPreviousButton}}
+                    <li><a><i class="previousPage navPage material-icons" style="color: #105078;">keyboard_arrow_left</i></a></li>{{/if}}
+                    {{#each numPages}}
+                    {{#if isThisCurPage this}}
+                    <li><a class="currentPage" style="color:lightgray;">{{this}}</a></li>
+                    {{else}}
+                    {{#if isEllipses this}}
+                    <li><a class="breakPage" style="color:lightgray;">{{this}}</a></li>
+                    {{else}}
+                    <li><a class="skipToPage" id="skipto{{this}}" style="color: #105078;">{{this}}</a></li>
+                    {{/if}}
+                    {{/if}}
+                    {{/each}}
+                    {{#if showNextButton}}
+                    <li><a><i class="nextPage navPage material-icons" style="color: #105078;">keyboard_arrow_right</i></a></li>{{/if}}
+                </ul>
+            </div>
+        </nav>
+
+            
+
+
+
+        <div class="col s3" style="padding-right: 0px;">
+            <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+                <p class="postUsername">{{> nametag owner}}</p>
+                {{#with getUserData owner}}
+                <p class="postUserData">Posts: {{postCount}}</p>
+                <p class="postUserData">Join Date: {{getYear createdAt}}-{{getMonth createdAt}}-{{getDate createdAt}}</p>
+                {{/with}}
+            </div>
+        </div>
+        <div class="col s9" style="padding-left: 5px;">
+            <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+                {{#unless inEditMode _id}}
+                <p class="postTitle">{{title}}</p>
+                <p class="author">By <a class="authorName">{{> nametag owner}}</a> at {{> datetag createdAt}}</p>
+                <p class="postContent">{{> showContent}}</p>
+                {{#if isOwner _id}}
+                <p class="editTopicButton">Edit</p>
+                {{/if}}
+                {{else}}
+                <form class="editTopic">
+                    <p>Title of the topic: <input type="text" name="title" value="{{title}}"></p>
+                    <label for="content">Content</label>
+                    {{> contentInput data=content}}
+                    <p><input type="submit" value="Submit"></p>
+                </form>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+
+    {{#each getTopicReplies _id}}
+    {{> viewTopicReply}}
+    {{/each}}
+
+    {{> newTopicReply}}
+</template>
+

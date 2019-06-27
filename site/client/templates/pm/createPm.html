@@ -1,0 +1,15 @@
+﻿<template name="createPm">
+    {{> pmHeader}}
+    <div class="row" style="background-color: white;">
+        <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+            <h2 style="margin: 0px;">Send a PM</h2>
+            <form class="createPm">
+                <p>To (Username): <input type="text" name="to"></p>
+                <p>Subject: <input type="text" name="title"></p>
+                <label for="content">Message</label>
+                {{> contentInput}}
+                <p class="right-align"><input type="submit" value="Send"></p>
+            </form>
+        </div>
+    </div>
+</template>

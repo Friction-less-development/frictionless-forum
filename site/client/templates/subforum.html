@@ -1,0 +1,44 @@
+<template name="subforum">
+    <div class="row" style="background-color: white;">
+        {{#if currentUser}}
+        <a class="newTitle" style="cursor:pointer;">Click me to create a new topic here.</a>
+        {{/if}}
+        <table class="highlight forumIndex">
+            <thead>
+                <tr>
+                    <th>Topics</th>
+                    <th>Replies</th>
+                    <th>Views</th>
+                    <th>Last Posts</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each topics}}
+                <tr>
+                    <td>
+                        <p class="forumTitle" style="margin:0px;">{{title}}</p>
+                        <p class="forumDescription" style="margin:0px;">by {{> nametag owner}}</p>
+                    </td>
+                    <td>{{getReplyData this}}</td>
+                    <td>TBA</td>
+                    <td>
+                        {{#with getLastReply this}}
+                        {{../title}}
+                        <br />
+                        {{> nametag owner}}
+                        <br />
+                        {{> datetag createdAt}}
+                        {{else}}
+                        None
+                        {{/with}}
+                    </td>
+                </tr>
+                {{else}}
+                It seems like there are no posts yet.
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+

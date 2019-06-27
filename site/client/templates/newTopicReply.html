@@ -1,0 +1,19 @@
+<template name="newTopicReply">
+    <div class="row" style="background-color: white; ">
+        <div class="col s12 m8 offset-m2">
+            <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+                {{#if user}}
+                <form class="newTopicReply">
+                    <label for="content">Reply</label>
+                    {{> contentInput}}
+                    <p><input type="submit" value="Submit"></p>
+                </form>
+
+                {{else}}
+                <p>Log in or register to reply.</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>
+

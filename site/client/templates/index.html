@@ -1,0 +1,43 @@
+<template name="index">
+    <div class="row" style="background-color: white;">
+        <table class="highlight forumIndex">
+            <thead>
+                <tr>
+                    <th>Forum</th>
+                    <th>Topics</th>
+                    <th>Posts</th>
+                    <th>Last Posts</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each forum}}
+                <tr>
+                    <td>
+                        <p class="forumTitle">{{title}}</p>
+                        <p class="forumDescription">{{description}}</p>
+                    </td>
+                    <td>{{count contents}}</td>
+                    <td>{{countReplies contents}}</td>
+                    <td>
+                        {{#with getRecentReply contents}}
+                        {{title}}
+                        <br />
+                        {{#with owner}}
+                        {{> nametag}}
+                        {{/with}}
+                        <br />
+                        {{> datetag bumpedAt}}
+                        {{else}}
+                        None
+                        {{/with}}
+                    </td>
+                </tr>
+                {{else}}
+                <p class="installForums" style="color: red; cursor: pointer;">OOPS. forum isn't set up yet, press me to install forum categories off the server. (temporary solution)</p>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+

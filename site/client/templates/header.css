@@ -1,0 +1,17 @@
+﻿.headerbar {
+    background-color: gray;
+    background-image: url(/images/bru2sh10.png);
+    background-repeat: repeat-x;
+}
+
+.navlinks li {
+    display: inline;
+    color: #105289 !important;
+}
+.navlinks li a {
+    cursor: pointer;
+    color: #105289 !important;
+}
+.navlinks li a:hover {
+    color: red !important;
+}

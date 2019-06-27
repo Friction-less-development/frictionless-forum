@@ -1,0 +1,26 @@
+<template name="listPms">
+    {{> pmHeader}}
+    <div class="row" style="background-color: white;">
+        <ul class="collection" style="margin: 0px; padding: 20px 10px;">
+            {{#each pms}}
+            <li class="collection-item" style={{isRead readYet}}>
+                <p class="pmSubjectBox"><a class="pmSubject" style="cursor:pointer;">{{title}}</a>
+                    <label style="position: absolute; top:20px; right:0px;">
+                        <input class="pmCheck" type="checkbox" id="delete{{_id}}" />
+                        <span> </span>
+                    </label>
+                </p>
+                <i class="pmData"><a class="sentByPm" style="cursor:pointer">{{#if ../in}}{{#with from}}{{> nametag}}{{/with}}{{else}}{{#with to}}{{> nametag}}{{/with}}{{/if}}</a> - {{> datetag createdAt}}</i>
+            </li>
+            {{else}}
+                <li class="collection-item">There are no messages.</li>
+            {{/each}}
+        </ul>
+        {{#if pms}}
+        <p class="right-align" style="padding-right: 20px;">
+            <button class="btn massDelete">Delete selected messages.</button>
+        </p>
+        {{/if}}
+    </div>
+</template>
+

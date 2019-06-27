@@ -1,0 +1,50 @@
+<template name="header">
+    <div class="row">
+        <div class="col s12 m12 l10 offset-l1 white">
+            <div class="headerbar">
+                <div class="row" style="margin-top:5px;">
+                    <div class="col s4 m2" style="height:80px; margin-top:5px;">
+                        <div style="padding:10px;">
+                            <a href="/" id="logo"><img src="/images/foruml10.png" alt="FORTRESS" /></a>
+                        </div>
+                    </div>
+                    <div class="col s8 m10" style="height:80px; margin-top:5px;">
+                        <p style="margin-top:10px; margin:0px;" class="white-text flow-text"><strong>FORUM&nbsp;-&nbsp;Portal</strong></p>
+                        <p style="margin:0px; font-size: 12px;" class="white-text flow-text">Forum for people who like forums. This is the first forum of it's kind, aims to be a forum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l10 offset-l1" style="background-color: white">
+            <div style="display: inline;">
+                <ul class="navlinks" style=" background-color: #cadceb; padding: 10px;">
+                    <li><a class="index">Home</a></li>
+                    <li><a class="portal">Portal</a></li>
+                    <!--<li>Calendar</li>-->
+                    <!--<li>FAQ</li>-->
+                    <!--<li>Search</li> Coming soon!-->
+                    {{#if currentUser}}
+                    <li>Memberlist</li>
+                    <!--<li>Usergroups</li>-->
+                    <li><a class="profile">Profile</a></li>
+                    <li><a class="messages">Messages</a></li>
+                    <li><a class="logout">Log out [ {{#with currentUser._id}}{{> nametag}}{{/with}} ]</a></li>
+                    {{else}}
+                    <li><a class="login">Log in</a></li>
+                    <li><a class="register">Register</a></li>
+                    {{/if}}
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l10 offset-l1">
+            {{>yield }}
+        </div>
+
+
+
+    </div>
+</template>
+

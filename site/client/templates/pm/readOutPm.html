@@ -1,0 +1,35 @@
+﻿<template name="readOutPm">
+    {{> pmHeader}}
+    <div class="row" style="background-color: white;  margin-bottom:0px;">
+        <div class="col s2" style="padding-right: 0px;">
+            <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+                <p class="postUsername">{{#with owner}}{{> nametag}}{{/with}}</p>
+            </div>
+        </div>
+        <div class="col s10" style="padding-left: 5px;">
+            <div class="card" style="background-color: #edf3f7; margin: 0px; padding:20px;">
+                {{#unless isEditing _id}}
+                {{#unless readYet}}
+                <p class="pmEditButton">Edit</p>
+                {{/unless}}
+                <p class="pmDeleteButton">Delete</p>
+                <p class="pmTitle">{{title}}</p>
+                <p class="author">From {{#with owner}}{{> nametag}}{{/with}} to {{#with to}}{{> nametag}}{{/with}}, {{> datetag createdAt}}</p>
+                {{#with getContent _id}}
+                <p class="postContent">{{> showContent}}</p>
+                {{/with}}
+                {{else}}
+                <form class="editPm">
+                    <p>To {{> nametag to}}</p>
+                    <p>Subject: <input type="text" name="title" value="{{title}}"></p>
+                    <label for="content">Message</label>
+                    {{#with getContent _id}}
+                    {{> contentInput data=this.content}}
+                    {{/with}}
+                    <p class="right-align"><input type="submit" value="Send"></p>
+                </form>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+</template>

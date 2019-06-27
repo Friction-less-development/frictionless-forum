@@ -1,0 +1,119 @@
+﻿<template name="contentInput">
+    <textarea name="content" class="materialize-textarea">{{data}}</textarea>
+    <a class="modal-trigger" href="#contentHelp" style="cursor: pointer;">
+        <i class="material-icons" style="position: absolute; right: 10px; top: 10px;">help</i>
+    </a>
+
+    <!-- Modal Structure -->
+    <div id="contentHelp" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Styling guide.</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Syntax</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Heading 1</td>
+                        <td># h1 Heading</td>
+                        <td><h1>h1 Heading</h1></td>
+                    </tr>
+                    <tr>
+                        <td>Heading 2</td>
+                        <td>## h2 Heading</td>
+                        <td><h2>h2 Heading</h2></td>
+                    </tr>
+                    <tr>
+                        <td>Heading 3</td>
+                        <td>### h3 Heading</td>
+                        <td><h3>h3 Heading</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Heading 4</td>
+                        <td>#### h4 Heading</td>
+                        <td><h4>h4 Heading</h4></td>
+                    </tr>
+                    <tr>
+                        <td>Heading 5</td>
+                        <td>##### h5 Heading</td>
+                        <td><h5>h5 Heading</h5></td>
+                    </tr>
+                    <tr>
+                        <td>Heading 6</td>
+                        <td>###### h6 Heading</td>
+                        <td><h6>h6 Heading</h6></td>
+                    </tr>
+                    <tr>
+                        <td>Line Break</td>
+                        <td>___ or --- or ***</td>
+                        <td><hr></td>
+                    </tr>
+                    <tr>
+                        <td>Bold</td>
+                        <td>**This is bold text** or __This is bold text__</td>
+                        <td><b>This is bold text</b></td>
+                    </tr>
+                    <tr>
+                        <td>Italics</td>
+                        <td>*This is italic text* or _This is italic text_</td>
+                        <td><i>This is italic text</i></td>
+                    </tr>
+                    <tr>
+                        <td>Strikethrough</td>
+                        <td>~~Never mind~~</td>
+                        <td><strike>Never mind</strike></td>
+                    </tr>
+                    <tr>
+                        <td>Quoting</td>
+                        <td>> This is a quote</td>
+                        <td>No example.</td>
+                    </tr>
+                    <tr>
+                        <td>Nested Quoting</td>
+                        <td>> > This would be a double quote and so on.</td>
+                        <td>No example</td>
+                    </tr>
+                    <tr>
+                        <td>Lists</td>
+                        <td>Create a list by starting a line with `+`, `-`, or `*`</td>
+                        <td>No example</td>
+                    </tr>
+                    <tr>
+                        <td>Nested Lists</td>
+                        <td>Sub-lists are made the same way, except by indenting 2 spaces.</td>
+                        <td>No example</td>
+                    </tr>
+                    <tr>
+                        <td>(Theres also tables and stuff. I may add info about them later)</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Links</td>
+                        <td>[This is a link](https://lego.com)</td>
+                        <td><a href="https://lego.com">This is a link</a></td>
+                    </tr>
+                    <tr>
+                        <td>Images</td>
+                        <td>![Google](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png)</td>
+                        <td><img alt="Google" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" /></td>
+                    </tr>
+                    <tr>
+                        <td>Emoji's</td>
+                        <td>See <a href="/emoji.json">here for a list. (Will eventually move to this guide). Note we can easily remove/add emojis to this list.</a></td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Alright</a>
+        </div>
+    </div>
+
+</template>
