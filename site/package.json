@@ -13,7 +13,7 @@
     "markdown-it": "^8.4.2",
     "markdown-it-emoji": "^1.4.0",
     "meteor-node-stubs": "~0.2.0",
-    "simpl-schema": "^1.5.5",
+    "simpl-schema": "^1.10.2",
     "simple-schema": "^1.1.0",
     "simpleschema2": "^1.1.18"
   }
